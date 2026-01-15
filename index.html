@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sujith's Biology Class</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    line-height: 1.6;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.quiz {
+    background: #eef2ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Certificate */
+#certificate {
+    display: none;
+    background: white;
+    border: 10px solid gold;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.ribbon {
+    background: gold;
+    color: black;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sujith's Biology Class</h1>
+    <h3>Grade 9 Advanced Biology</h3>
+    <h4>Central Nervous System</h4>
+</header>
+
+<section>
+<h2>The Central Nervous System (CNS)</h2>
+
+<p>The nervous system consists of two major divisions:</p>
+<ul>
+<li><b>Central Nervous System (CNS):</b> Brain and spinal cord</li>
+<li><b>Peripheral Nervous System (PNS):</b> Sensory and motor neurons</li>
+</ul>
+
+<h2>Functions of the CNS</h2>
+<ul>
+<li>Coordinates all body activities</li>
+<li>Processes and analyzes information</li>
+<li>Relays messages between body parts</li>
+<li>Stores information (memory)</li>
+</ul>
+
+<h2>The Brain</h2>
+<p>The brain contains over <b>100 billion neurons</b> and acts as the control center of the body.</p>
+
+<h3>Major Parts of the Brain</h3>
+<ul>
+<li><b>Cerebrum:</b> Thinking, memory, learning, speech, voluntary movements, sensory perception</li>
+<li><b>Cerebellum:</b> Balance, posture, coordination, smooth muscle movements</li>
+<li><b>Brain Stem:</b> Connects brain to spinal cord</li>
+<li><b>Medulla Oblongata:</b> Controls breathing, heart rate, blood pressure, reflexes</li>
+<li><b>Pons:</b> Relays signals and regulates breathing</li>
+<li><b>Hypothalamus:</b> Maintains homeostasis (temperature, thirst, hunger, sleep)</li>
+</ul>
+
+<h2>The Spinal Cord</h2>
+<ul>
+<li>Extends from brain to lower back</li>
+<li>Protected by vertebrae</li>
+<li>Controls reflex actions</li>
+<li>Connects CNS to the rest of the body</li>
+</ul>
+
+<!-- QUIZ -->
+<div class="quiz">
+<h2>Quiz: Central Nervous System</h2>
+
+<label>Student Name:</label><br>
+<input type="text" id="studentName" placeholder="Enter your name"><br><br>
+
+<p>1. Which system consists of the brain and spinal cord?</p>
+<input type="radio" name="q1"> PNS<br>
+<input type="radio" name="q1" id="q1c"> CNS<br><br>
+
+<p>2. Which part controls balance?</p>
+<input type="radio" name="q2" id="q2c"> Cerebellum<br>
+<input type="radio" name="q2"> Cerebrum<br><br>
+
+<p>3. Which part regulates breathing and heart rate?</p>
+<input type="radio" name="q3" id="q3c"> Medulla Oblongata<br>
+<input type="radio" name="q3"> Hypothalamus<br><br>
+
+<p>4. What maintains homeostasis?</p>
+<input type="radio" name="q4" id="q4c"> Hypothalamus<br>
+<input type="radio" name="q4"> Pons<br><br>
+
+<p>5. Reflexes are processed in the:</p>
+<input type="radio" name="q5" id="q5c"> Spinal Cord<br>
+<input type="radio" name="q5"> Cerebrum<br><br>
+
+<button onclick="generateCertificate()">Submit Quiz</button>
+</div>
+
+<!-- CERTIFICATE -->
+<div id="certificate">
+<div class="ribbon">Certificate of Achievement</div>
+
+<img src="https://e7.pngegg.com/pngimages/513/665/png-clipart-abu-dhabi-ministry-of-education-logo-united-arab-emirates-miscellaneous-company.png" width="120"><br><br>
+
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." width="200"><br><br>
+
+<h2>Dalma School</h2>
+<h3>Science Department</h3>
+
+<p>This is to certify that</p>
+<h2 id="certName"></h2>
+
+<p>has successfully completed the learning activity and quiz on</p>
+<h3>Central Nervous System</h3>
+
+<div class="signatures">
+<div>
+<p>_______________________</p>
+<p><b>Biology Teacher</b><br>Sujith Bhaskaran</p>
+</div>
+<div>
+<p>_______________________</p>
+<p><b>Principal</b><br>Fatima Alhosani</p>
+</div>
+</div>
+</div>
+
+</section>
+
+<footer>
+Dalma School
+</footer>
+
+<script>
+function generateCertificate() {
+    let score = 0;
+    if (q1c.checked) score++;
+    if (q2c.checked) score++;
+    if (q3c.checked) score++;
+    if (q4c.checked) score++;
+    if (q5c.checked) score++;
+
+    let name = document.getElementById("studentName").value;
+
+    if (score >= 4 && name !== "") {
+        document.getElementById("certName").innerText = name;
+        document.getElementById("certificate").style.display = "block";
+        window.scrollTo(0, document.body.scrollHeight);
+    } else {
+        alert("Please answer correctly (minimum 4/5) and enter your name.");
+    }
+}
+</script>
+
+</body>
+</html>
